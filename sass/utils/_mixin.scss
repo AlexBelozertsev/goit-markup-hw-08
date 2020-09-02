@@ -1,0 +1,43 @@
+@mixin transition($property) {
+  transition: $property $time-tranforming $form-transforming;
+}
+
+@mixin flex($box-form, $alight-form) {
+  display: $box-form;
+  align-items: center;
+  justify-content: $alight-form;
+}
+
+@function f-s($px) {
+  @return ($px / 16) + rem;
+}
+
+@mixin font($fweight, $lheight, $lspacing) {
+  font-weight: $fweight;
+  line-height: $lheight;
+  letter-spacing: $lspacing;
+}
+
+@mixin border($weight, $color) {
+  border: $weight solid $color;
+}
+
+@mixin vis-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin prim-title() {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-bottom: 50px;
+}

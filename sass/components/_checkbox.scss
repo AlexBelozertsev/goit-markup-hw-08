@@ -1,0 +1,41 @@
+.checkbox {
+  margin-bottom: 30px;
+  font-size: f-s(14);
+  line-height: 1.71;
+
+  & label {
+    @include flex(flex, flex-start);
+  }
+
+  & a {
+    color: $accent-text-color;
+    text-decoration-line: underline;
+  }
+
+  & input {
+    @include vis-hidden;
+
+    &:checked ~ .castom-check {
+      background-color: $accent-text-color;
+      background-image: url(../images/symbol-defs-1.svg);
+      background-origin: border-box;
+      background-size: contain;
+      border-color: transparent;
+    }
+  }
+}
+
+.castom-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  @include border(2px, $primary-text-color);
+  border-radius: 2px;
+  transition: background-color $time-tranforming $form-transforming;
+  cursor: pointer;
+
+  &:hover {
+    @include border(2px, $accent-text-color);
+  }
+}

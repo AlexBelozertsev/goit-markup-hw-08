@@ -1,0 +1,15 @@
+%nav-link {
+  display: block;
+  padding: 32px 0;
+
+  color: $primary-text-color;
+  @include font(500, 1.14, 0.02em);
+  font-size: f-s(14);
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}

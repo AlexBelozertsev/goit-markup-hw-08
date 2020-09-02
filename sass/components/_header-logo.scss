@@ -1,0 +1,11 @@
+.logo {
+  font-family: $logo-font;
+  @include font(700, 1.19, 0.03em);
+  font-size: f-s(26);
+  color: $logo-text-color;
+  margin-right: 85px;
+
+  &-web {
+    color: $accent-text-color;
+  }
+}

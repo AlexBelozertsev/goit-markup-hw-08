@@ -1,0 +1,9 @@
+main {
+  transform: translateY(-1px);
+}
+
+@import '../components/hero';
+@import '../components/feauture';
+@import '../components/developments';
+@import './section-team';
+@import '../components/client';

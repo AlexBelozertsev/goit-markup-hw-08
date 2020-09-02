@@ -1,0 +1,38 @@
+.client {
+  padding: calc((100% - 1200px) / 2);
+  padding-top: 84px;
+  padding-bottom: 94px;
+
+  & .list {
+    display: inline-flex;
+  }
+
+  &-title {
+    @include prim-title;
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-item a {
+    @include flex(flex, center);
+    width: 170px;
+    height: 90px;
+    color: $border-color;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    transition: color $time-tranforming $form-transforming,
+      border $time-tranforming $form-transforming;
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+      @include border(1px, $accent-text-color);
+    }
+  }
+
+  &-link {
+    fill: currentColor;
+  }
+}

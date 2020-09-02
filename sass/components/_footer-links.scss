@@ -1,0 +1,22 @@
+.link-items > a {
+  @include flex(flex, center);
+
+  width: 44px;
+  height: 44px;
+
+  background-color: $footer-background-item-color;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: background-color $time-tranforming $form-transforming;
+
+  &:focus,
+  &:hover {
+    background-color: $accent-text-color;
+  }
+}
+
+.link-items:not(:last-child) {
+  margin-right: 10px;
+}

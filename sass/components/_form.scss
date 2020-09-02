@@ -1,0 +1,75 @@
+.form-title {
+  text-align: center;
+  @include font(700, 1.15, inherit);
+  font-size: f-s(20);
+  margin-bottom: 12px;
+}
+
+.form-elements {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  & label {
+    font-size: f-s(12);
+    @include font(400, 1.17, 0.01em);
+    color: $secondary-text-color;
+    margin-bottom: 4px;
+  }
+
+  & input {
+    height: 40px;
+    padding: 11px 42px;
+    @include border(1px, $border-modal-color);
+    border-radius: 4px;
+    transition: border-color $time-tranforming $form-transforming;
+
+    &:focus,
+    &:hover {
+      border-color: $accent-text-color;
+      outline-color: $accent-text-color;
+    }
+  }
+}
+
+.form-elements textarea {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+  @include border(1px, $border-modal-color);
+  border-radius: 4px;
+
+  transition: border-color $time-tranforming $form-transforming;
+
+  &::placeholder {
+    font-size: f-s(12);
+    color: $placeholder-color;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $accent-text-color;
+    outline-color: $accent-text-color;
+  }
+}
+
+.icon-form-elements {
+  line-height: 0;
+  position: absolute;
+  top: 55%;
+  left: 15px;
+
+  transition: fill $time-tranforming $form-transforming;
+}
+.form-elements input:hover ~ .icon-form-elements {
+  fill: $accent-text-color;
+}
+
+form .button {
+  @include flex(flex, center);
+}

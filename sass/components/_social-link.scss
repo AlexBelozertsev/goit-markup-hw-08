@@ -1,0 +1,25 @@
+.soсial-links {
+  @include flex(flex, space-evenly);
+  font-size: 0;
+  padding: 16px 32px 24px;
+
+  & a {
+    @include flex(flex, center);
+    width: 44px;
+    height: 44px;
+    color: $icon-color;
+    border-radius: 50%;
+    transition: color $time-tranforming $form-transforming,
+      background-color $time-tranforming $form-transforming;
+
+    &:hover,
+    &:focus {
+      color: $third-color;
+      background-color: $accent-text-color;
+    }
+  }
+}
+
+.icon-soсial-links {
+  fill: currentColor;
+}

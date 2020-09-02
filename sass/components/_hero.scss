@@ -1,0 +1,27 @@
+.hero {
+  @include flex(flex, center);
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $first-background-color;
+  background-image: linear-gradient(
+      $first-background-color,
+      $first-background-color
+    ),
+    url('../images/Header.jpg');
+
+  &-title {
+    color: $third-color;
+    @include font(900, 1.36, 0.06em);
+    font-size: f-s(44);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  & .container {
+    @include flex(flex, center);
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,24 @@
+#email {
+  color: $fourth-text-color;
+  background-color: $footer-background-color;
+  line-height: 1.25;
+  width: 355px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 10px;
+
+  @include border(1px, $border-input-color);
+  border-radius: 4px;
+}
+
+form .button {
+  display: inline-flex;
+  box-sizing: border-box;
+  padding: 10px 28px;
+}
+
+.button-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

@@ -1,0 +1,7 @@
+.team-section {
+  background-color: $second-background-color;
+  padding: 94px calc((100% - 1200px) / 2);
+}
+
+@import '../components/team';
+@import '../components/social-link';

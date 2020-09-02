@@ -1,0 +1,29 @@
+.list.team {
+  @include flex(flex, space-between);
+}
+.team-section .prim-title {
+  @include prim-title;
+}
+.team-card {
+  background-color: $third-color;
+  line-height: 1.19;
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: $card-shadow;
+
+  & > h4 {
+    @include vis-hidden;
+  }
+
+  & .text {
+    line-height: 1.19;
+  }
+}
+.team-img {
+  display: block;
+  margin-bottom: 30px;
+}
+.team-id-name {
+  font-weight: 500;
+  margin-bottom: 10px;
+}

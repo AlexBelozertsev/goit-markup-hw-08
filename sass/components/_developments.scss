@@ -1,0 +1,33 @@
+.developments {
+  padding: 0 calc((100% - 1200px) / 2);
+  padding-bottom: 104px;
+
+  & .list {
+    @include flex(flex, space-between);
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  & img {
+    display: block;
+  }
+
+  &-title {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 27px 0;
+    color: $third-color;
+    background-color: $first-background-color;
+    @include font(700, 1.15, inherit);
+    font-size: f-s(14);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.dev-primary-title {
+  @include prim-title;
+}
