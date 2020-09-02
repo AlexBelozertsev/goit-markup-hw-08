@@ -38,6 +38,29 @@
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-
   margin-bottom: 50px;
+}
+
+@mixin for-size($range) {
+  $phone-responsive-boundary: 480px;
+  $tablet-bottom-boundary: 768px;
+  $desktop-bottom-boundary: 1200px;
+
+  @if $range == phone-responsive {
+    @media (max-width: #{$phone-responsive-boundary - 1}) {
+      @content;
+    }
+  } @else if $range == phone {
+    @media (min-width: $phone-upper-boundary) {
+      @content;
+    }
+  } @else if $range == tablet {
+    @media (min-width: $tablet-bottom-boundary) {
+      @content;
+    }
+  } @else if $range == desktop {
+    @media (min-width: $desktop-bottom-boundary) {
+      @content;
+    }
+  }
 }
