@@ -2,6 +2,10 @@ html {
   font-size: 16px;
 }
 
+* {
+  outline: 2px solid red;
+}
+
 body {
   background-color: $third-color;
   color: $primary-text-color;
@@ -25,6 +29,18 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+section:not(:first-child) {
+  padding-top: 60px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+  }
 }
 
 .list {

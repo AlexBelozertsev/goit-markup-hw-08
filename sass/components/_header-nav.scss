@@ -1,4 +1,11 @@
-nav .list {
+.navigation {
+  display: none;
+
+  @include for-size(tablet) {
+    display: contents;
+  }
+}
+.navigation .list {
   display: flex;
 }
 

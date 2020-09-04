@@ -1,5 +1,19 @@
 .container {
-  margin: 0 auto;
-  width: 1200px;
+  width: 100%;
   padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  // max-width: 1200px;
+
+  @include for-size(phone) {
+    width: 480px;
+  }
+
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
 }

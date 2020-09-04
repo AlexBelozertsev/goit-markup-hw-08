@@ -1,13 +1,20 @@
+.contact-links {
+  display: none;
+
+  @include for-size(tablet) {
+    display: contents;
+  }
+}
 .contact.list {
   display: flex;
   margin-left: auto;
 }
 
-.cont-items:not(:last-child) {
+.contact-items:not(:last-child) {
   margin-right: 30px;
 }
 
-.contacts {
+.contacts-data {
   @extend %nav-link;
   @include flex(flex, flex-start);
   color: $secondary-text-color;

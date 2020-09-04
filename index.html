@@ -16,74 +16,94 @@
   </head>
 
   <body>
-    <header>
+    <!-- <header>
       <div class="container main">
-        <!-- logo -->
+
         <a href="./index.html" class="logo"
           ><span class="logo-web">Web</span> Studio</a
         >
-        <!-- Navigation menu -->
-        <nav>
-          <!-- nav list -->
-          <ul class="list">
-            <li class="nav-item">
-              <a href="./index.html" class="nav-link current"
-                >Студия
-                <div class="row"></div
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a href="./portfolio.html" class="nav-link"
-                >Портфолио
-                <div class="row"></div
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link"
-                >Контакты
-                <div class="row"></div
-              ></a>
-            </li>
-          </ul>
-        </nav>
 
-        <!-- Contact links -->
-        <ul class="contact list">
-          <li class="cont-items">
-            <!-- знак конверта можно вставить кодом: &#9993; -->
-            <a href="mailto:info@devstudio.com" class="contacts mail">
-              <svg class="icon-contact" width="16" height="11">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="cont-items">
-            <a href="tel:+380961111111" class="contacts tel">
-              <svg class="icon-contact" width="10" height="15">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 1111</a
-            >
-          </li>
-        </ul>
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-cross" href="./img/menu_hover.svg"></use>
+            <use class="icon-menu" href="./img/menu.svg"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <div class="navigation">
+            <nav>
+              <ul class="list">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link current"
+                    >Студия
+                    <div class="row"></div
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a href="./portfolio.html" class="nav-link"
+                    >Портфолио
+                    <div class="row"></div
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link"
+                    >Контакты
+                    <div class="row"></div
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="contact-links">
+            <ul class="contact list">
+              <li class="contact-items">
+                <a href="mailto:info@devstudio.com" class="contacts-data mail">
+                  <svg class="icon-contact" width="16" height="11">
+                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contact-items">
+                <a href="tel:+380961111111" class="contacts-data tel">
+                  <svg class="icon-contact" width="10" height="15">
+                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 1111</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </header>
+    </header> -->
 
     <!-- main -->
     <main>
       <!-- hero -->
       <section class="hero">
-        <div class="container">
+        <!-- <div class="container">
           <h1 class="hero-title">
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
           <button class="button" data-open-modal>Заказать услугу</button>
-        </div>
+        </div> -->
 
         <!-- modale window -->
-        <div class="backdrop is-hidden" data-backdrop>
+        <!-- <div class="backdrop is-hidden" data-backdrop>
           <div class="modal">
             <form action="">
               <h2 class="form-title">
@@ -148,29 +168,7 @@
               </div>
             </form>
           </div>
-        </div>
-
-        <!-- скрипт взаимодействия с модальным окном из модуля №8 А.Репеты -->
-        <script>
-          const refs = {
-            openModalBtn: document.querySelector('[data-open-modal]'),
-            closeModalBtn: document.querySelector('[data-close-modal]'),
-            backdrop: document.querySelector('[data-backdrop]'),
-          };
-
-          refs.openModalBtn.addEventListener('click', toggleModal);
-          refs.closeModalBtn.addEventListener('click', toggleModal);
-
-          refs.backdrop.addEventListener('click', logBackdropClick);
-
-          function toggleModal() {
-            refs.backdrop.classList.toggle('is-hidden');
-          }
-
-          function logBackdropClick() {
-            console.log('Это клик в бекдроп');
-          }
-        </script>
+        </div> -->
       </section>
 
       <!-- our feature -->
@@ -180,9 +178,11 @@
           <h2 class="feature-primary-title">Наши достоинства</h2>
           <ul class="list">
             <li class="feature-item">
-              <svg class="feature-icon">
-                <use href="./images/symbol-defs.svg#icon-antenna1"></use>
-              </svg>
+              <div class="feature-block-icon">
+                <svg class="feature-icon" width="70" height="70">
+                  <use href="./images/symbol-defs.svg#icon-antenna1"></use>
+                </svg>
+              </div>
               <h3 class="title">Внимание к деталям</h3>
               <p class="text">
                 Идейные соображения, а также начало повседневной работы по
@@ -190,9 +190,11 @@
               </p>
             </li>
             <li class="feature-item">
-              <svg class="feature-icon">
-                <use href="./images/symbol-defs.svg#icon-clock1"></use>
-              </svg>
+              <div class="feature-block-icon">
+                <svg class="feature-icon" width="70" height="70">
+                  <use href="./images/symbol-defs.svg#icon-clock1"></use>
+                </svg>
+              </div>
               <h3 class="title">Пунктуальность</h3>
               <p class="text">
                 Задача организации, в особенности же рамки и место обучения
@@ -200,9 +202,11 @@
               </p>
             </li>
             <li class="feature-item">
-              <svg class="feature-icon">
-                <use href="./images/symbol-defs.svg#icon-diagram1"></use>
-              </svg>
+              <div class="feature-block-icon">
+                <svg class="feature-icon" width="70" height="70">
+                  <use href="./images/symbol-defs.svg#icon-diagram1"></use>
+                </svg>
+              </div>
               <h3 class="title">Планирование</h3>
               <p class="text">
                 Равным образом консультация с широким активом в значительной
@@ -210,9 +214,11 @@
               </p>
             </li>
             <li class="feature-item">
-              <svg class="feature-icon">
-                <use href="./images/symbol-defs.svg#icon-astronaut1"></use>
-              </svg>
+              <div class="feature-block-icon">
+                <svg class="feature-icon" width="70" height="70">
+                  <use href="./images/symbol-defs.svg#icon-astronaut1"></use>
+                </svg>
+              </div>
               <h3 class="title">Современные технологии</h3>
               <p class="text">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -249,7 +255,7 @@
       </section>
 
       <!-- our team -->
-      <section class="team-section">
+      <!-- <section class="team-section">
         <div class="container">
           <h2 class="prim-title">Наша команда</h2>
           <ul class="list team">
@@ -262,11 +268,9 @@
               />
               <h3 class="team-id-name">Игорь Демьяненко</h3>
               <p class="text">Product Designer</p>
-              <!-- связаться со мной, невидимый заголовок н4 -->
               <h4>Я в социальных сетях</h4>
               <ul class="soсial-links">
                 <li>
-                  <!-- aria-label="... link" вместо изображения-->
                   <a href="" target="_blank" rel="noopener noreferrer">
                     <svg class="icon-soсial-links" width="20" height="20">
                       <use
@@ -308,11 +312,9 @@
               />
               <h3 class="team-id-name">Ольга Репина</h3>
               <p class="text">Frontend Developer</p>
-              <!-- связаться со мной, невидимый заголовок н4 -->
               <h4>Я в социальных сетях</h4>
               <ul class="soсial-links">
                 <li>
-                  <!-- aria-label="... link" вместо изображения-->
                   <a href="" target="_blank" rel="noopener noreferrer">
                     <svg class="icon-soсial-links" width="20" height="20">
                       <use
@@ -354,11 +356,9 @@
               />
               <h3 class="team-id-name">Николай Тарасов</h3>
               <p class="text">Marketing</p>
-              <!-- связаться со мной, невидимый заголовок н4 -->
               <h4>Я в социальных сетях</h4>
               <ul class="soсial-links">
                 <li>
-                  <!-- aria-label="... link" вместо изображения-->
                   <a href="" target="_blank" rel="noopener noreferrer">
                     <svg class="icon-soсial-links" width="20" height="20">
                       <use
@@ -400,11 +400,9 @@
               />
               <h3 class="team-id-name">Михаил Ермаков</h3>
               <p class="text">UI Designer</p>
-              <!-- связаться со мной, невидимый заголовок н4 -->
               <h4>Я в социальных сетях</h4>
               <ul class="soсial-links">
                 <li>
-                  <!-- aria-label="... link" вместо изображения-->
                   <a href="" target="_blank" rel="noopener noreferrer">
                     <svg class="icon-soсial-links" width="20" height="20">
                       <use
@@ -438,10 +436,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- our clients -->
-      <section class="client">
+      <!-- <section class="client">
         <div class="container">
           <h2 class="client-title">Постоянные клиенты</h2>
           <ul class="list">
@@ -489,14 +487,13 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer-block">
-          <!-- невидимый заголовок н2 -->
           <h2>наши реквизиты</h2>
           <a href="./index.html" class="logo"
             ><span class="logo-web">Web</span> Studio</a
@@ -513,12 +510,12 @@
                 >
               </li>
               <li>
-                <a href="mailto:info@example.com" class="contacts"
+                <a href="mailto:info@example.com" class="contacts-data"
                   >info@example.com</a
                 >
               </li>
               <li>
-                <a href="tel:+380991111111" class="contacts"
+                <a href="tel:+380991111111" class="contacts-data"
                   >38 099 111 11 11</a
                 >
               </li>
@@ -530,7 +527,6 @@
           <h3 class="title">присоединяйтесь</h3>
           <ul class="list">
             <li class="link-items">
-              <!-- aria-label="... link" вместо изображения-->
               <a href="" target="_blank" rel="noopener noreferrer">
                 <svg class="icon-footer-links" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-instagram2"></use>
@@ -562,8 +558,8 @@
         </div>
 
         <div class="footer-block">
+          <h3 class="title">Подпишитесь на рассылку</h3>
           <form action="">
-            <h3 class="title">Подпишитесь на рассылку</h3>
             <input type="email" name="email" id="email" placeholder="E-mail" />
             <button type="submit" class="button">
               Подписаться
@@ -574,6 +570,9 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

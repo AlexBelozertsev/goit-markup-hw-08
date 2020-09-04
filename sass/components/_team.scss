@@ -1,9 +1,11 @@
 .list.team {
-  @include flex(flex, space-between);
+  // @include flex(flex, space-between);
 }
+
 .team-section .prim-title {
   @include prim-title;
 }
+
 .team-card {
   background-color: $third-color;
   line-height: 1.19;
@@ -19,10 +21,11 @@
     line-height: 1.19;
   }
 }
+
 .team-img {
-  display: block;
   margin-bottom: 30px;
 }
+
 .team-id-name {
   font-weight: 500;
   margin-bottom: 10px;

@@ -1,6 +1,10 @@
 .developments {
-  padding: 0 calc((100% - 1200px) / 2);
-  padding-bottom: 104px;
+  // padding: 0 calc((100% - 1200px) / 2);
+  display: none;
+
+  @include for-size(desktop) {
+    display: contents;
+  }
 
   & .list {
     @include flex(flex, space-between);
@@ -8,10 +12,6 @@
 
   &-item {
     position: relative;
-  }
-
-  & img {
-    display: block;
   }
 
   &-title {

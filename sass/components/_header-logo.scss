@@ -1,9 +1,13 @@
 .logo {
   font-family: $logo-font;
-  @include font(700, 1.19, 0.03em);
-  font-size: f-s(26);
+  @include font(700, 1.17, 0.03em);
   color: $logo-text-color;
-  margin-right: 85px;
+
+  @include for-size(desktop) {
+    line-height: 1.19;
+    font-size: f-s(26);
+    margin-right: 85px;
+  }
 
   &-web {
     color: $accent-text-color;

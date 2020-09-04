@@ -22,10 +22,6 @@
     box-shadow: $card-shadow-hover;
   }
 
-  & img {
-    display: block;
-  }
-
   & > a:hover .hover-text {
     transform: translateY(0);
   }
