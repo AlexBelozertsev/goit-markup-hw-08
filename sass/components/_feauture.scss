@@ -32,8 +32,10 @@
 }
 
 .feature-item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   @include for-size(tablet) {
