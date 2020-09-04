@@ -23,7 +23,6 @@
     background-color: $first-background-color;
     @include font(700, 1.15, inherit);
     font-size: f-s(14);
-    text-align: center;
     text-transform: uppercase;
   }
 }

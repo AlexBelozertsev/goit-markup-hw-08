@@ -1,9 +1,15 @@
 .soсial-links {
-  @include flex(flex, space-evenly);
+  @include flex(flex, center);
   font-size: 0;
-  padding: 16px 32px 24px;
+  margin-bottom: 24px;
 
-  & a {
+  li {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  a {
     @include flex(flex, center);
     width: 44px;
     height: 44px;

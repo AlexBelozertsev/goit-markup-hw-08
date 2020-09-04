@@ -43,10 +43,6 @@ html {
   font-size: 16px;
 }
 
-* {
-  outline: 2px solid red;
-}
-
 body {
   background-color: #ffffff;
   color: #212121;
@@ -61,6 +57,8 @@ h1,
 h2,
 h3,
 h4 {
+  text-align: center;
+  font-weight: 700;
   font-size: inherit;
   margin: 0;
 }
@@ -359,7 +357,6 @@ main {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: inherit;
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -441,7 +438,6 @@ main {
   line-height: 1.15;
   letter-spacing: inherit;
   font-size: 0.875rem;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -449,29 +445,49 @@ main {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   margin-bottom: 50px;
 }
 
 .team-section {
   background-color: #f5f4fa;
+  padding-top: 60px;
+  padding-bottom: 90px;
 }
 
-.team-section .prim-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
+@media (max-width: 1200px) {
+  .team-section .prim-title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team-section .prim-title {
+    font-size: 36px;
+    line-height: 1.167;
+    margin-bottom: 50px;
+  }
 }
 
 .team-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #ffffff;
   line-height: 1.19;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 .team-card > h4 {
@@ -486,7 +502,8 @@ main {
 }
 
 .team-card .text {
-  line-height: 1.19;
+  line-height: inherit;
+  margin-bottom: 16px;
 }
 
 .team-img {
@@ -505,11 +522,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 0;
-  padding: 16px 32px 24px;
+  margin-bottom: 24px;
+}
+
+.soсial-links li:not(:last-child) {
+  margin-right: 10px;
 }
 
 .soсial-links a {
@@ -548,7 +569,6 @@ main {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   margin-bottom: 50px;
 }
 

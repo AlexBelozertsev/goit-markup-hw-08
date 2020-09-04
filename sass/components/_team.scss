@@ -3,22 +3,28 @@
 }
 
 .team-section .prim-title {
-  @include prim-title;
+  @include title(ph-tab);
+  @include title(desktop);
 }
 
 .team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: $third-color;
   line-height: 1.19;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
   box-shadow: $card-shadow;
+  margin-bottom: 30px;
 
   & > h4 {
     @include vis-hidden;
   }
 
-  & .text {
-    line-height: 1.19;
+  .text {
+    line-height: inherit;
+    margin-bottom: 16px;
   }
 }
 
