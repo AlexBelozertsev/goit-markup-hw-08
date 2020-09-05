@@ -42,6 +42,10 @@ html {
   font-size: 16px;
 }
 
+* {
+  outline: 2px solid red;
+}
+
 body {
   background-color: #ffffff;
   color: #212121;
@@ -76,13 +80,13 @@ img {
   display: block;
 }
 
-section:not(:first-child) {
-  padding-top: 60px;
+section {
+  margin-bottom: 60px;
 }
 
 @media (min-width: 1200px) {
-  section:not(:first-child) {
-    padding-top: 94px;
+  section {
+    margin-bottom: 94px;
   }
 }
 

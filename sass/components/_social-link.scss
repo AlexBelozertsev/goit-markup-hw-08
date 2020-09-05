@@ -3,6 +3,10 @@
   font-size: 0;
   margin-bottom: 24px;
 
+  @include for-size(desktop) {
+    margin-bottom: 30px;
+  }
+
   li {
     &:not(:last-child) {
       margin-right: 10px;

@@ -1,8 +1,10 @@
 .team-section {
   background-color: $second-background-color;
-  padding-top: 60px;
-  padding-bottom: 90px;
-  // padding: 94px calc((100% - 1200px) / 2);
+  padding: 60px 0;
+
+  @include for-size(desktop) {
+    padding: 94px 0;
+  }
 }
 
 @import '../components/team';

@@ -2,9 +2,9 @@ html {
   font-size: 16px;
 }
 
-// * {
-//   outline: 2px solid red;
-// }
+* {
+  outline: 2px solid red;
+}
 
 body {
   background-color: $third-color;
@@ -37,11 +37,11 @@ img {
   display: block;
 }
 
-section:not(:first-child) {
-  padding-top: 60px;
+section {
+  margin-bottom: 60px;
 
   @include for-size(desktop) {
-    padding-top: 94px;
+    margin-bottom: 94px;
   }
 }
 

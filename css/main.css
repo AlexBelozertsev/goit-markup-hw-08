@@ -43,6 +43,10 @@ html {
   font-size: 16px;
 }
 
+* {
+  outline: 2px solid red;
+}
+
 body {
   background-color: #ffffff;
   color: #212121;
@@ -77,13 +81,13 @@ img {
   display: block;
 }
 
-section:not(:first-child) {
-  padding-top: 60px;
+section {
+  margin-bottom: 60px;
 }
 
 @media (min-width: 1200px) {
-  section:not(:first-child) {
-    padding-top: 94px;
+  section {
+    margin-bottom: 94px;
   }
 }
 
@@ -407,7 +411,7 @@ main {
 
 @media (min-width: 1200px) {
   .developments {
-    display: contents;
+    display: block;
   }
 }
 
@@ -450,8 +454,26 @@ main {
 
 .team-section {
   background-color: #f5f4fa;
-  padding-top: 60px;
-  padding-bottom: 90px;
+  padding: 60px 0;
+}
+
+@media (min-width: 1200px) {
+  .team-section {
+    padding: 94px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .list.team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -478,16 +500,30 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #ffffff;
   line-height: 1.19;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .team-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .team-card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team-card {
+    margin-bottom: 0;
+  }
 }
 
 .team-card > h4 {
@@ -508,6 +544,19 @@ main {
 
 .team-img {
   margin-bottom: 30px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .team-img {
+    width: 354px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team-img {
+    width: 270px;
+  }
 }
 
 .team-id-name {
@@ -527,6 +576,12 @@ main {
           justify-content: center;
   font-size: 0;
   margin-bottom: 24px;
+}
+
+@media (min-width: 1200px) {
+  .soсial-links {
+    margin-bottom: 30px;
+  }
 }
 
 .soсial-links li:not(:last-child) {

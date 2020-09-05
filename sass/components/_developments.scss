@@ -3,7 +3,7 @@
   // padding: 0 calc((100% - 1200px) / 2);
 
   @include for-size(desktop) {
-    display: contents;
+    display: block;
   }
 
   .list {

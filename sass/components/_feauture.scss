@@ -1,6 +1,5 @@
 .feature {
   font-size: f-s(14);
-  // padding: 94px calc((100% - 1200px) / 2);
 
   &-primary-title {
     @include vis-hidden;
