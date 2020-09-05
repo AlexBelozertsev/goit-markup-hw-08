@@ -1,12 +1,13 @@
 .footer {
   @include flex(flex, center);
+  padding-bottom: 60px;
 
-  & .logo,
-  & .title {
+  .logo,
+  .title {
     color: $third-color;
   }
 
-  & .title {
+  .title {
     font-size: f-s(14);
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -14,20 +15,35 @@
 }
 
 .footer-block {
+  @include flex(flex, center);
+  flex-direction: column;
+  margin-top: 60px;
+
+  &:nth-child(3n) {
+    width: 100%;
+  }
+
+  @include for-size(tablet) {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: calc((100% - 5px) / 2);
+    justify-content: space-between;
+  }
+
+  @include for-size(desktop) {
+    align-items: baseline;
+    width: calc((50% - 10px) / 2);
+    &:nth-child(3n) {
+      width: calc(50% - 15px);
+    }
+  }
+
   & > h2 {
     @include vis-hidden;
   }
 
-  & > a.logo {
-    display: inline-block;
-  }
-
   & > .list {
     @include flex(flex, space-evenly);
-  }
-
-  &:nth-child(3n) {
-    width: calc(50% - 15px);
   }
 }
 
@@ -37,9 +53,18 @@
   font-size: f-s(14);
   margin-top: 20px;
 
-  & .contacts {
+  .contacts-item {
+    @include flex(flex, center);
+    margin-top: 8px;
+
+    @include for-size(desktop) {
+      display: block;
+    }
+  }
+
+  .contacts-data {
+    line-height: 1.71;
     color: $fourth-text-color;
-    margin-top: 9px;
     padding: 0;
   }
 

@@ -94,13 +94,13 @@
     <main>
       <!-- hero -->
       <section class="hero">
-        <!-- <div class="container">
+        <div class="container">
           <h1 class="hero-title">
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
           <button class="button" data-open-modal>Заказать услугу</button>
-        </div> -->
+        </div>
 
         <!-- modale window -->
         <!-- <div class="backdrop is-hidden" data-backdrop>
@@ -174,7 +174,6 @@
       <!-- our feature -->
       <section class="feature">
         <div class="container">
-          <!-- невидимый заголовок н2 -->
           <h2 class="feature-primary-title">Наши достоинства</h2>
           <ul class="list">
             <li class="feature-item">
@@ -183,7 +182,7 @@
                   <use href="./images/symbol-defs.svg#icon-antenna1"></use>
                 </svg>
               </div>
-              <h3 class="title">Внимание к деталям</h3>
+              <h3 class="feature-title">Внимание к деталям</h3>
               <p class="text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
@@ -195,7 +194,7 @@
                   <use href="./images/symbol-defs.svg#icon-clock1"></use>
                 </svg>
               </div>
-              <h3 class="title">Пунктуальность</h3>
+              <h3 class="feature-title">Пунктуальность</h3>
               <p class="text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
@@ -207,7 +206,7 @@
                   <use href="./images/symbol-defs.svg#icon-diagram1"></use>
                 </svg>
               </div>
-              <h3 class="title">Планирование</h3>
+              <h3 class="feature-title">Планирование</h3>
               <p class="text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
@@ -219,7 +218,7 @@
                   <use href="./images/symbol-defs.svg#icon-astronaut1"></use>
                 </svg>
               </div>
-              <h3 class="title">Современные технологии</h3>
+              <h3 class="feature-title">Современные технологии</h3>
               <p class="text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
@@ -266,15 +265,24 @@
             <li class="team-card">
               <picture>
                 <source
-                  srcset="./images/desktop/Product_Designer.jpg x1, ./images/desktop/Product_Designer.jpg x2"
+                  srcset="
+                    ./images/desktop/Product_Designer.jpg    1x,
+                    ./images/desktop/Product_Designer@2x.jpg 2x
+                  "
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="./images/tablet/Product_Designer.jpg x1, ./images/tablet/Product_Designer.jpg x2"
+                  srcset="
+                    ./images/tablet/Product_Designer.jpg    1x,
+                    ./images/tablet/Product_Designer@2x.jpg 2x
+                  "
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="./images/mobile/Product_Designer.jpg x1, ./images/mobile/Product_Designer.jpg x2"
+                  srcset="
+                    ./images/mobile/Product_Designer.jpg    1x,
+                    ./images/mobile/Product_Designer@2x.jpg 2x
+                  "
                   media="(max-width: 767px)"
                 />
                 <img
@@ -322,12 +330,35 @@
             </li>
 
             <li class="team-card">
-              <img
-                src="images/desktop/Frontend_Developer.jpg"
-                alt="фото разработчика"
-                width="270"
-                class="team-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/Frontend_Developer.jpg    1x,
+                    ./images/desktop/Frontend_Developer@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/Frontend_Developer.jpg    1x,
+                    ./images/tablet/Frontend_Developer@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/Frontend_Developer.jpg    1x,
+                    ./images/mobile/Frontend_Developer@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/desktop/Frontend_Developer.jpg"
+                  alt="фото разработчика"
+                  class="team-img"
+                />
+              </picture>
+
               <h3 class="team-id-name">Ольга Репина</h3>
               <p class="text">Frontend Developer</p>
               <h4>Я в социальных сетях</h4>
@@ -366,12 +397,34 @@
             </li>
 
             <li class="team-card">
-              <img
-                src="images/desktop/Marketing.jpg"
-                alt="фото маркетолога"
-                width="270"
-                class="team-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/Marketing.jpg    1x,
+                    ./images/desktop/Marketing@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/Marketing.jpg    1x,
+                    ./images/tablet/Marketing@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/Marketing.jpg    1x,
+                    ./images/mobile/Marketing@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/desktop/Marketing.jpg"
+                  alt="фото маркетолога"
+                  class="team-img"
+                />
+              </picture>
               <h3 class="team-id-name">Николай Тарасов</h3>
               <p class="text">Marketing</p>
               <h4>Я в социальных сетях</h4>
@@ -410,12 +463,34 @@
             </li>
 
             <li class="team-card">
-              <img
-                src="images/desktop/UI_Designer.jpg"
-                alt="фото разработчика"
-                width="270"
-                class="team-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/UI_Designer.jpg    1x,
+                    ./images/desktop/UI_Designer@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/UI_Designer.jpg    1x,
+                    ./images/tablet/UI_Designer@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/UI_Designer.jpg    1x,
+                    ./images/mobile/UI_Designer@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="images/desktop/UI_Designer.jpg"
+                  alt="фото разработчика"
+                  class="team-img"
+                />
+              </picture>
               <h3 class="team-id-name">Михаил Ермаков</h3>
               <p class="text">UI Designer</p>
               <h4>Я в социальных сетях</h4>
@@ -509,7 +584,7 @@
     </main>
 
     <!-- footer -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer-block">
           <h2>наши реквизиты</h2>
@@ -527,14 +602,14 @@
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li>
+              <li class="contacts-item">
                 <a href="mailto:info@example.com" class="contacts-data"
                   >info@example.com</a
                 >
               </li>
-              <li>
+              <li class="contacts-item">
                 <a href="tel:+380991111111" class="contacts-data"
-                  >38 099 111 11 11</a
+                  >+38 099 111 11 11</a
                 >
               </li>
             </ul>
@@ -588,7 +663,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>

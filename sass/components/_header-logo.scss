@@ -1,6 +1,8 @@
 .logo {
   font-family: $logo-font;
   @include font(700, 1.17, 0.03em);
+  font-size: f-s(24);
+  // font-size: f-s(26);
   color: $logo-text-color;
 
   @include for-size(desktop) {

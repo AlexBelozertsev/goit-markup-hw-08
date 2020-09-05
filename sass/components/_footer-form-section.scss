@@ -1,18 +1,30 @@
 footer form {
-  // display: flex;
+  @include flex(flex, center);
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+
+  @include for-size(desktop) {
+    flex-direction: row;
+    align-items: start;
+    max-width: 100%;
+  }
 }
 
 #email {
   color: $fourth-text-color;
   background-color: $footer-background-color;
   line-height: 1.25;
-  // width: 355px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
-  margin-right: 10px;
-
+  margin-bottom: 20px;
   @include border(1px, $border-input-color);
   border-radius: 4px;
+
+  @include for-size(desktop) {
+    margin-right: 10px;
+  }
 }
 
 .button-icon {

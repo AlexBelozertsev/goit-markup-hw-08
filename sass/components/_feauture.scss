@@ -14,7 +14,7 @@
     margin-bottom: 30px;
   }
 
-  .title {
+  &-title {
     @include font(700, 1.14, inherit);
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -30,14 +30,14 @@
 }
 
 .feature-item {
-  @media screen and (max-width: 768px) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   @include for-size(tablet) {
     width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }

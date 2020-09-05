@@ -1,9 +1,10 @@
 .footer {
-  height: 252px;
   background-color: $footer-background-color;
-
-  & > .container {
-    // @include flex(flex, space-between);
+  @include for-size(desktop) {
+    & > .container {
+      @include flex(flex, space-between);
+      align-items: baseline;
+    }
   }
 }
 
