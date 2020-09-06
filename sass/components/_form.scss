@@ -1,8 +1,12 @@
 .form-title {
   text-align: center;
-  @include font(700, 1.15, inherit);
+  @include font(700, 1.5, inherit);
   font-size: f-s(20);
   margin-bottom: 12px;
+
+  @include for-size(desktop) {
+    line-height: 1.15;
+  }
 }
 
 .form-elements {
@@ -43,7 +47,6 @@
   padding: 12px 16px;
   @include border(1px, $border-modal-color);
   border-radius: 4px;
-
   transition: border-color $time-tranforming $form-transforming;
 
   &::placeholder {
@@ -63,7 +66,6 @@
   position: absolute;
   top: 55%;
   left: 15px;
-
   transition: fill $time-tranforming $form-transforming;
 }
 .form-elements input:hover ~ .icon-form-elements {

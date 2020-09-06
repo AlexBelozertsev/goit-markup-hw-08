@@ -307,6 +307,15 @@ main {
 }
 
 .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 1600px;
   height: 400px;
   margin-right: auto;
@@ -353,14 +362,38 @@ main {
   }
 }
 
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .hero-title {
   color: #ffffff;
   font-weight: 900;
-  line-height: 1.36;
+  line-height: 1.62;
   letter-spacing: 0.06em;
+  font-size: 1.625rem;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 2.75rem;
+    line-height: 1.36;
+  }
 }
 
 .feature {
@@ -743,13 +776,28 @@ main {
 
 .modal {
   position: absolute;
-  top: 50vh;
+  top: 9%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-height: 580px;
+  width: 450px;
+  height: 610px;
   background-color: #ffffff;
   padding: 40px;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    top: 19%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    top: 21%;
+    min-width: 528px;
+    height: 580px;
+  }
 }
 
 .modal ul {
@@ -791,10 +839,16 @@ main {
 .form-title {
   text-align: center;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: inherit;
   font-size: 1.25rem;
   margin-bottom: 12px;
+}
+
+@media (min-width: 1200px) {
+  .form-title {
+    line-height: 1.15;
+  }
 }
 
 .form-elements {
@@ -897,9 +951,17 @@ form .button {
 }
 
 .checkbox {
+  font-size: 0.75rem;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
   margin-bottom: 30px;
-  font-size: 0.875rem;
-  line-height: 1.71;
+}
+
+@media (min-width: 1200px) {
+  .checkbox {
+    font-size: 0.875rem;
+    line-height: 1.71;
+  }
 }
 
 .checkbox label {
