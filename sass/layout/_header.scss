@@ -1,25 +1,17 @@
 .container.main {
   position: relative;
-  @include flex(flex, flex-start);
+  height: 60px;
+  @include flex(flex, space-between);
   border-bottom: 1px solid $border-header-color;
 
-  // @include for-size(phone-responsive) {
-  //   justify-content: space-between;
-  //   height: 60px;
-  // }
-
-  // @include for-size(phone) {
-  //   justify-content: space-between;
-  //   height: 60px;
-  // }
-
-  // @include for-size(tablet) {
-  //   height: 80px;
-  // }
+  @include for-size(tablet) {
+    height: 80px;
+  }
 }
 
 @import '../components/header-logo';
 @import '../utils/placeholder';
 @import '../components/mobile-menu-bottom';
+@import '../components/mobile-nav-menu';
 @import '../components/header-nav';
 @import '../components/header-cont';

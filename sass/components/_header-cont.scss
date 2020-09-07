@@ -1,17 +1,33 @@
 .contact-links {
-  display: none;
-
-  @include for-size(tablet) {
-    display: contents;
-  }
-}
-.contact.list {
-  display: flex;
   margin-left: auto;
 }
 
-.contact-items:not(:last-child) {
-  margin-right: 30px;
+.contact.list {
+  @include flex(flex, center);
+  flex-direction: column;
+
+  @include for-size(tablet) {
+    align-items: start;
+  }
+
+  @include for-size(desktop) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.contact-items + .contact-items {
+  @media screen and(max-width: 767px) {
+    margin-top: 16px;
+  }
+
+  @media screen and(max-width: 1199px) {
+    margin-top: 10px;
+  }
+
+  @include for-size(desktop) {
+    margin-left: 30px;
+  }
 }
 
 .contacts-data {

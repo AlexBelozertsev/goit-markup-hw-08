@@ -1,23 +1,35 @@
-.menu-button {
-  display: inline-flex;
+.nav-btn-menu {
+  @include flex(flex, center);
+  width: 40px;
+  height: 40px;
   margin: 0;
   padding: 0;
   border: none;
+  color: $primary-text-color;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+
+  svg {
+    fill: currentColor;
+  }
 
   @include for-size(tablet) {
     display: none;
   }
 }
 
-.menu-button .icon-cross {
+.nav-btn-menu .icon-cross {
   display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.nav-btn-menu.is-open .icon-cross {
   display: block;
 }
 
-.menu-button.is-open .icon-menu {
+.nav-btn-menu.is-open .icon-menu {
   display: none;
 }

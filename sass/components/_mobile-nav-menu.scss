@@ -1,0 +1,25 @@
+.menu-container {
+  @media screen and(max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 60px;
+    background-color: $third-color;
+
+    &.is-open {
+      display: block;
+    }
+
+    div + div {
+      margin-top: 60px;
+    }
+  }
+
+  @include for-size(tablet) {
+    @include flex(flex, space-between);
+    width: 100%;
+  }
+}

@@ -1,14 +1,22 @@
+.main-logo {
+  margin-right: 88px;
+
+  @include for-size(desktop) {
+    margin-right: 93px;
+  }
+}
+
 .logo {
+  display: inline-flex;
+  width: 100%;
   font-family: $logo-font;
   @include font(700, 1.17, 0.03em);
   font-size: f-s(24);
-  // font-size: f-s(26);
   color: $logo-text-color;
 
   @include for-size(desktop) {
     line-height: 1.19;
     font-size: f-s(26);
-    margin-right: 85px;
   }
 
   &-web {

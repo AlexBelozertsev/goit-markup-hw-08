@@ -1,20 +1,26 @@
 .list.portfolio {
-  display: flex;
-  flex-wrap: wrap;
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .portfolio-card {
-  width: calc((100% - (2 * 30px)) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
   transition: box-shadow $time-tranforming $form-transforming;
-
-  &:nth-child(3n) {
-    margin-right: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+  @include for-size(tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - (2 * 30px)) / 3);
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover,
@@ -31,12 +37,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 370px;
+  width: 100%;
+  height: 100%;
   color: $third-color;
   background-color: $hover-card-color;
   font-size: f-s(18);
   line-height: 1.56;
-  padding: 63px 24px;
+  padding: 77px 24px;
   transform: translateY(100%);
   transition: transform $time-tranforming $form-transforming;
 }
@@ -49,6 +56,7 @@
   }
 
   &-title {
+    text-align: left;
     @include font(700, 2, 0.06em);
     font-size: f-s(18);
     color: $primary-text-color;
@@ -62,6 +70,6 @@
 
   &-text {
     color: $secondary-text-color;
-    line-height: 1.9;
+    line-height: 1.87;
   }
 }
