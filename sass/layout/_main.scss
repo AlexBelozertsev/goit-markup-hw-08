@@ -1,5 +1,7 @@
 main {
-  transform: translateY(-1px);
+  @include for-size(tablet) {
+    transform: translateY(-1px);
+  }
 }
 
 @import '../components/hero';

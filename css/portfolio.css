@@ -42,10 +42,6 @@ html {
   font-size: 16px;
 }
 
-* {
-  outline: 1px solid red;
-}
-
 body {
   background-color: #ffffff;
   color: #212121;
@@ -181,6 +177,9 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -192,6 +191,9 @@ section {
 
 @media (min-width: 1200px) {
   .logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     line-height: 1.19;
     font-size: 1.625rem;
   }
@@ -245,6 +247,11 @@ section {
   color: #2196f3;
 }
 
+.nav-btn-menu:hover .menu-container, .nav-btn-menu:focus .menu-container {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .nav-btn-menu svg {
   fill: currentColor;
 }
@@ -271,12 +278,18 @@ section {
   .menu-container {
     display: none;
     position: absolute;
-    top: 100%;
+    bottom: 364px;
     left: 0;
     width: 100%;
     z-index: 2;
     padding: 60px;
     background-color: #ffffff;
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-container.is-open {
     display: block;
