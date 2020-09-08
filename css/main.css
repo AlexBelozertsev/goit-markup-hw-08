@@ -248,11 +248,6 @@ section {
   color: #2196f3;
 }
 
-.nav-btn-menu:hover .menu-container, .nav-btn-menu:focus .menu-container {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .nav-btn-menu svg {
   fill: currentColor;
 }
@@ -279,18 +274,12 @@ section {
   .menu-container {
     display: none;
     position: absolute;
-    bottom: 364px;
+    top: calc(100% + 1px);
     left: 0;
     width: 100%;
     z-index: 2;
     padding: 60px;
     background-color: #ffffff;
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
-    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-container.is-open {
     display: block;

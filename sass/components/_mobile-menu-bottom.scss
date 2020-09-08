@@ -11,10 +11,6 @@
   &:hover,
   &:focus {
     color: $accent-text-color;
-
-    & .menu-container {
-      transform: translateY(0);
-    }
   }
 
   svg {

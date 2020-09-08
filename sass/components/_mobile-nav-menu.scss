@@ -2,15 +2,12 @@
   @media screen and(max-width: 767px) {
     display: none;
     position: absolute;
-    bottom: 364px;
+    top: calc(100% + 1px);
     left: 0;
     width: 100%;
     z-index: 2;
     padding: 60px;
     background-color: $third-color;
-
-    transform: translateY(200%);
-    transition: transform $time-tranforming $form-transforming;
 
     &.is-open {
       display: block;
