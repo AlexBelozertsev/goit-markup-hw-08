@@ -1,6 +1,5 @@
 .developments {
   display: none;
-  // padding: 0 calc((100% - 1200px) / 2);
 
   @include for-size(desktop) {
     display: block;
@@ -11,6 +10,7 @@
   }
 
   &-item {
+    width: calc((100% - (2 * 30px)) / 3);
     position: relative;
   }
 
