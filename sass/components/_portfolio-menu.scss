@@ -21,15 +21,13 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .list-menu + .list-menu:not(:nth-child(4)) {
-    margin-left: 8px;
+.list-menu {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
   }
-}
 
-@include for-size(tablet) {
-  .list-menu + .list-menu {
-    margin-left: 8px;
+  &:not(:last-child) {
+    margin-right: 8px;
   }
 }
 
@@ -40,15 +38,10 @@
   min-width: 73px;
   min-height: 38px;
   padding: 6px 22px;
-  margin-bottom: 15px;
   box-shadow: none;
   transition: color $time-tranforming $form-transforming,
     background-color $time-tranforming $form-transforming,
     box-shadow $time-tranforming $form-transforming;
-
-  @include for-size(tablet) {
-    margin-bottom: 0;
-  }
 
   &:hover,
   &:focus {
